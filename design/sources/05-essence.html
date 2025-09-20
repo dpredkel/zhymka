@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>жЫмка</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#7f13ec",
+            "background-light": "#f7f6f8",
+            "background-dark": "#191022",
+          },
+          fontFamily: {
+            "display": ["Newsreader"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<main class="flex min-h-screen w-full items-center justify-center p-4">
+<div class="flex flex-col items-center space-y-16 text-center">
+<h1 class="text-5xl md:text-6xl font-light tracking-tight text-gray-900 dark:text-white">
+        Остаётся только суть.
+      </h1>
+<a class="inline-block rounded-lg bg-primary px-8 py-4 text-lg font-medium text-white transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary/30" href="#">
+        [ Получить свою «жЫмку» в Telegram ]
+      </a>
+</div>
+</main>
+
+</body></html>

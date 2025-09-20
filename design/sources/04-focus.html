@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>жЫмка</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#614ce6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#131121",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col items-center justify-center min-h-screen px-4 py-16 text-center">
+<div class="max-w-2xl mx-auto">
+<h2 class="text-4xl font-bold tracking-tight text-background-dark dark:text-background-light md:text-5xl">
+                И доставляем то, что важно именно вам.
+            </h2>
+<p class="mt-6 text-lg leading-8 text-background-dark/70 dark:text-background-light/70">
+                Настройте свои темы, и «жЫмка» соберёт для вас персональную ленту. Ваши правила, ваш фокус.
+            </p>
+<div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+<span class="inline-flex items-center rounded-lg bg-background-dark/5 dark:bg-background-light/5 px-4 py-2 text-sm font-medium text-background-dark dark:text-background-light">#AI</span>
+<span class="inline-flex items-center rounded-lg bg-background-dark/5 dark:bg-background-light/5 px-4 py-2 text-sm font-medium text-background-dark dark:text-background-light">#Дизайн</span>
+<span class="inline-flex items-center rounded-lg bg-background-dark/5 dark:bg-background-light/5 px-4 py-2 text-sm font-medium text-background-dark dark:text-background-light">#Стартапы</span>
+</div>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>жЫмка</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#614ce6",
+            "background-light": "#f6f6f8",
+            "background-dark": "#131121",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .icon-dissolve {
+      animation: dissolve 2s ease-in-out forwards;
+    }
+    @keyframes dissolve {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex items-center justify-center min-h-screen">
+<div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="text-gray-900 dark:text-gray-100">
+<h1 class="text-4xl md:text-5xl font-black leading-tight tracking-tight text-gray-900 dark:text-white">
+            Сначала — убираем лишнее.
+          </h1>
+<p class="mt-4 text-lg text-gray-600 dark:text-gray-300">
+            Наши алгоритмы находят и удаляют рекламу, промо-посты и кликбейт. До вас доходит только контент с реальной ценностью.
+          </p>
+</div>
+<div class="relative flex items-center justify-center h-96">
+<div class="absolute w-full h-full">
+<svg class="absolute top-1/4 left-1/4 w-16 h-16 text-red-500 icon-dissolve" fill="none" stroke="currentColor" style="animation-delay: 0s;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<svg class="absolute bottom-1/4 right-1/4 w-20 h-20 text-yellow-500 icon-dissolve" fill="none" stroke="currentColor" style="animation-delay: 0.5s;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.148-6.014a1.76 1.76 0 01.592-1.956L11 5.882z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M10.882 5.882L15 2l5.5 4.5-3.5 1.5-4.118-2.118zM15 13a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<svg class="absolute top-1/3 right-1/3 w-12 h-12 text-blue-500 icon-dissolve" fill="none" stroke="currentColor" style="animation-delay: 1s;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 19V6l12-3v13M9 19c-3.333-2-3.333-4-3-6 1 0 3 1 3 1m12-5v10l-9-2.5V3.5L21 1z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<svg class="relative w-full h-full text-gray-400 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<line class="stroke-primary" stroke-width="2" x1="10" x2="90" y1="90" y2="10"></line>
+<line class="stroke-primary" stroke-width="2" x1="10" x2="90" y1="10" y2="90"></line>
+</svg>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>
