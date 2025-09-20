@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>жЫмка – Ваша лента. Только без мусора.</title>
+
+    <!-- Подключаем все шрифты, которые используются на странице -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Подключаем Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Единая конфигурация Tailwind для всей страницы -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#614ce6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#131121",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "serif": ["Newsreader", "serif"]
+                    }
+                },
+            },
+        }
+    </script>
+
+    <!-- Стили для анимаций, взятые из твоих файлов -->
+    <style>
+        .noise-bg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.15; background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none'%3e%3cpath fill='%23614ce6' d='M0 0h32v32H0z'/%3e%3c/svg%3e"), url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='100' height='100' fill='none'%3e%3cpath fill='%23614ce6' d='M0 0h100v100H0z'/%3e%3c/svg%3e"); animation: noise 1s steps(2) infinite; }
+        @keyframes noise { 0%, 100% { background-position: 0 0, 0 0; } 10% { background-position: -5% -5%, 5% 5%; } 20% { background-position: -10% 5%, 10% -5%; } 30% { background-position: 5% -10%, -5% 10%; } 40% { background-position: -5% 15%, 5% -10%; } 50% { background-position: -10% -5%, 15% 5%; } 60% { background-position: 15% 0, -10% 0; } 70% { background-position: 0 -15%, 0 10%; } 80% { background-position: 10% 5%, 5% 15%; } 90% { background-position: -15% -5%, 10% -10%; } }
+        .chaos-element { animation: float 6s ease-in-out infinite; position: absolute; border-radius: 0.25rem; background-color: hsla(0, 0%, 100%, 0.05); border: 1px solid hsla(0, 0%, 100%, 0.1); backdrop-filter: blur(4px); }
+        @keyframes float { 0% { transform: translatey(0px); } 50% { transform: translatey(-20px); } 100% { transform: translatey(0px); } }
+        .text-block-line { height: 0.5rem; border-radius: 9999px; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-gray-800 dark:text-gray-200">
+
+    <!-- ===== Секция 1: Хук (01-hook.html) ===== -->
+    <section class="font-display bg-background-light dark:bg-background-dark">
+        <div class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="noise-bg"></div>
+                <div class="chaos-element top-[10%] left-[5%] h-32 w-48 opacity-50" style="animation-delay: -1s;"><div class="h-full w-full bg-primary/20 p-2 rounded-lg"><div class="h-2 w-1/2 bg-primary/50 rounded-full mb-2"></div><div class="h-12 w-full bg-primary/30 rounded"></div></div></div>
+                <div class="chaos-element bottom-[15%] left-[10%] h-24 w-56 opacity-60" style="animation-delay: -2s;"><div class="h-full w-full bg-primary/20 p-2 rounded-lg flex items-end"><div class="w-1/4 h-3/4 bg-primary/40 rounded-sm mr-1"></div><div class="w-1/4 h-1/2 bg-primary/40 rounded-sm mr-1"></div><div class="w-1/4 h-full bg-primary/40 rounded-sm mr-1"></div><div class="w-1/4 h-2/3 bg-primary/40 rounded-sm"></div></div></div>
+                <div class="chaos-element top-[5%] right-[8%] h-20 w-40 opacity-40" style="animation-delay: -3s;"><div class="p-2"><div class="flex items-center mb-2"><div class="w-6 h-6 rounded-full bg-primary/50 mr-2"></div><div class="h-2 w-20 bg-primary/50 rounded-full"></div></div><div class="h-2 w-full bg-primary/30 rounded-full mb-1"></div><div class="h-2 w-3/4 bg-primary/30 rounded-full"></div></div></div>
+                <div class="chaos-element bottom-[5%] right-[12%] h-40 w-64 opacity-70" style="animation-delay: -4s;"><div class="p-3"><div class="h-3 w-1/3 bg-primary/60 rounded-full mb-3"></div><div class="h-2 w-full bg-primary/30 rounded-full mb-2"></div><div class="h-2 w-full bg-primary/30 rounded-full mb-2"></div><div class="h-2 w-3/4 bg-primary/30 rounded-full mb-2"></div><div class="h-2 w-1/2 bg-primary/30 rounded-full"></div></div></div>
+                <div class="chaos-element top-[40%] left-[20%] h-16 w-32 opacity-30" style="animation-delay: -5s;"><div class="flex items-center justify-between p-2"><div class="h-3 w-12 bg-primary/40 rounded-full"></div><div class="w-8 h-8 rounded-full bg-primary/50"></div></div></div>
+            </div>
+            <main class="relative z-10 flex flex-col items-center justify-center text-center p-4">
+                <div class="bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-8 md:p-16 rounded-xl">
+                    <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-slate-800 dark:text-slate-200">Ваша лента.</h1>
+                    <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-slate-800 dark:text-slate-200">Только без мусора.</h1>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- ===== Секция 2: Фильтрация (02-filter.html) ===== -->
+    <section class="bg-background-light dark:bg-background-dark">
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="text-gray-900 dark:text-gray-100"><h1 class="text-4xl md:text-5xl font-black leading-tight tracking-tight text-gray-900 dark:text-white">Сначала — убираем лишнее.</h1><p class="mt-4 text-lg text-gray-600 dark:text-gray-300">Наши алгоритмы находят и удаляют рекламу, промо-посты и кликбейт. До вас доходит только контент с реальной ценностью.</p></div>
+                    <div class="relative flex items-center justify-center h-96">
+                        <div class="absolute w-full h-full"><svg class="absolute top-1/4 left-1/4 w-16 h-16 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><svg class="absolute bottom-1/4 right-1/4 w-20 h-20 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.148-6.014a1.76 1.76 0 01.592-1.956L11 5.882z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M10.882 5.882L15 2l5.5 4.5-3.5 1.5-4.118-2.118zM15 13a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><svg class="absolute top-1/3 right-1/3 w-12 h-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 19V6l12-3v13M9 19c-3.333-2-3.333-4-3-6 1 0 3 1 3 1m12-5v10l-9-2.5V3.5L21 1z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div>
+                        <svg class="relative w-full h-full text-gray-400 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><line class="stroke-primary" stroke-width="2" x1="10" x2="90" y1="90" y2="10"></line><line class="stroke-primary" stroke-width="2" x1="10" x2="90" y1="10" y2="90"></line></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Секция 3: Сжатие (03-summary.html) ===== -->
+    <section class="bg-background-light dark:bg-background-dark">
+        <div class="flex flex-col items-center justify-center min-h-screen w-full p-4 sm:p-6 lg:p-8">
+            <div class="w-full max-w-4xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24">
+                <div class="flex-1 flex flex-col items-center justify-center text-center lg:text-left lg:items-start">
+                    <h1 class="text-4xl sm:text-5xl font-black text-gray-900 dark:text-white mb-4">Затем — сжимаем до сути.</h1>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-md">Любой пост превращается в краткую сводку. Понять главное можно за 5 секунд, а не за 5 минут.</p>
+                    <a href="#" class="bg-primary text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-primary/90 focus:outline-none focus:ring-4 focus:ring-primary/50 transition-all duration-300">Попробовать</a>
+                </div>
+                <div class="flex-1 flex flex-col items-center justify-center w-full max-w-sm">
+                    <div class="w-full space-y-2 p-4"><div class="text-block-line bg-gray-300 dark:bg-gray-700 w-full"></div><div class="text-block-line bg-gray-300 dark:bg-gray-700 w-5/6"></div><div class="text-block-line bg-gray-300 dark:bg-gray-700 w-full"></div><div class="text-block-line bg-gray-300 dark:bg-gray-700 w-4/5"></div><div class="text-block-line bg-gray-300 dark:bg-gray-700 w-full"></div><div class="text-block-line bg-gray-300 dark:bg-gray-700 w-3/4"></div><div class="text-block-line bg-gray-300 dark:bg-gray-700 w-5/6"></div></div>
+                    <div class="w-full flex items-center justify-center my-4"><svg class="w-8 h-8 text-gray-400 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div>
+                    <div class="w-full space-y-2 p-4"><div class="text-block-line bg-primary w-full"></div><div class="text-block-line bg-primary w-5/6"></div><div class="text-block-line bg-primary w-3/4"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Секция 4: Фокус (04-focus.html) ===== -->
+    <section class="bg-background-light dark:bg-background-dark">
+        <div class="flex flex-col items-center justify-center min-h-screen px-4 py-16 text-center">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-4xl font-bold tracking-tight text-background-dark dark:text-background-light md:text-5xl">И доставляем то, что важно именно вам.</h2>
+                <p class="mt-6 text-lg leading-8 text-background-dark/70 dark:text-background-light/70">Настройте свои темы, и «жЫмка» соберёт для вас персональную ленту. Ваши правила, ваш фокус.</p>
+                <div class="mt-10 flex flex-wrap items-center justify-center gap-4"><span class="inline-flex items-center rounded-lg bg-background-dark/5 dark:bg-background-light/5 px-4 py-2 text-sm font-medium text-background-dark dark:text-background-light">#AI</span><span class="inline-flex items-center rounded-lg bg-background-dark/5 dark:bg-background-light/5 px-4 py-2 text-sm font-medium text-background-dark dark:text-background-light">#Дизайн</span><span class="inline-flex items-center rounded-lg bg-background-dark/5 dark:bg-background-light/5 px-4 py-2 text-sm font-medium text-background-dark dark:text-background-light">#Стартапы</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Секция 5: Суть (05-essence.html) ===== -->
+    <section class="font-serif bg-background-light dark:bg-background-dark">
+        <div class="flex min-h-screen w-full items-center justify-center p-4">
+            <div class="flex flex-col items-center space-y-16 text-center">
+                <h1 class="text-5xl md:text-6xl font-light tracking-tight text-gray-900 dark:text-white">Остаётся только суть.</h1>
+                <a class="inline-block rounded-lg bg-primary px-8 py-4 text-lg font-medium text-white transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary/30" href="#">[ Получить свою «жЫмку» в Telegram ]</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
