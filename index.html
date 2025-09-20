@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>жЫмка – Ваша лента. Только без мусора.</title>
 
+    <!-- ===== Иконка для вкладки (favicon) ===== -->
+    <!-- Путь обновлен: браузер будет искать favicon.png внутри папки images -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- ===== Мета-теги для красивых ссылок в соцсетях ===== -->
+    <meta property="og:title" content="жЫмка – Ваша лента. Только без мусора.">
+    <meta property="og:description" content="Персональный фильтр контента, который отсеивает шум, сжимает длинные посты до сути и доставляет только то, что важно вам.">
+    <!-- Путь обновлен: ссылка будет использовать og-image.png из папки images -->
+    <meta property="og:image" content="images/og-image.png"> 
+    <!-- НЕ ЗАБУДЬ поменять ТВОЙ_НИКНЕЙМ на свой никнейм на GitHub -->
+    <meta property="og:url" content="https://ТВОЙ_НИКНЕЙМ.github.io/zhymka-landing/">
+    <meta name="twitter:card" content="summary_large_image">
+
+
     <!-- Подключаем все шрифты, которые используются на странице -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +59,7 @@
 </head>
 <body class="bg-background-light dark:bg-background-dark font-sans text-gray-800 dark:text-gray-200">
 
-    <!-- ===== Секция 1: Хук (01-hook.html) ===== -->
+    <!-- ===== Секция 1: Хук ===== -->
     <section class="font-display bg-background-light dark:bg-background-dark">
         <div class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden">
             <div class="absolute inset-0 z-0">
@@ -60,12 +74,16 @@
                 <div class="bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-8 md:p-16 rounded-xl">
                     <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-slate-800 dark:text-slate-200">Ваша лента.</h1>
                     <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-slate-800 dark:text-slate-200">Только без мусора.</h1>
+                    <!-- ССЫЛКА ОБНОВЛЕНА -->
+                    <a href="https://t.me/zhymka_bot" target="_blank" class="mt-8 inline-block rounded-lg bg-primary px-8 py-4 text-lg font-medium text-white transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary/30">
+                        Попробовать бесплатно в Telegram
+                    </a>
                 </div>
             </main>
         </div>
     </section>
 
-    <!-- ===== Секция 2: Фильтрация (02-filter.html) ===== -->
+    <!-- ===== Секция 2: Фильтрация ===== -->
     <section class="bg-background-light dark:bg-background-dark">
         <div class="flex items-center justify-center min-h-screen">
             <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,14 +98,13 @@
         </div>
     </section>
 
-    <!-- ===== Секция 3: Сжатие (03-summary.html) ===== -->
+    <!-- ===== Секция 3: Сжатие ===== -->
     <section class="bg-background-light dark:bg-background-dark">
         <div class="flex flex-col items-center justify-center min-h-screen w-full p-4 sm:p-6 lg:p-8">
             <div class="w-full max-w-4xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24">
                 <div class="flex-1 flex flex-col items-center justify-center text-center lg:text-left lg:items-start">
                     <h1 class="text-4xl sm:text-5xl font-black text-gray-900 dark:text-white mb-4">Затем — сжимаем до сути.</h1>
                     <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-md">Любой пост превращается в краткую сводку. Понять главное можно за 5 секунд, а не за 5 минут.</p>
-                    <a href="#" class="bg-primary text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-primary/90 focus:outline-none focus:ring-4 focus:ring-primary/50 transition-all duration-300">Попробовать</a>
                 </div>
                 <div class="flex-1 flex flex-col items-center justify-center w-full max-w-sm">
                     <div class="w-full space-y-2 p-4"><div class="text-block-line bg-gray-300 dark:bg-gray-700 w-full"></div><div class="text-block-line bg-gray-300 dark:bg-gray-700 w-5/6"></div><div class="text-block-line bg-gray-300 dark:bg-gray-700 w-full"></div><div class="text-block-line bg-gray-300 dark:bg-gray-700 w-4/5"></div><div class="text-block-line bg-gray-300 dark:bg-gray-700 w-full"></div><div class="text-block-line bg-gray-300 dark:bg-gray-700 w-3/4"></div><div class="text-block-line bg-gray-300 dark:bg-gray-700 w-5/6"></div></div>
@@ -98,7 +115,7 @@
         </div>
     </section>
 
-    <!-- ===== Секция 4: Фокус (04-focus.html) ===== -->
+    <!-- ===== Секция 4: Фокус ===== -->
     <section class="bg-background-light dark:bg-background-dark">
         <div class="flex flex-col items-center justify-center min-h-screen px-4 py-16 text-center">
             <div class="max-w-2xl mx-auto">
@@ -109,12 +126,15 @@
         </div>
     </section>
 
-    <!-- ===== Секция 5: Суть (05-essence.html) ===== -->
+    <!-- ===== Секция 5: Суть ===== -->
     <section class="font-serif bg-background-light dark:bg-background-dark">
         <div class="flex min-h-screen w-full items-center justify-center p-4">
             <div class="flex flex-col items-center space-y-16 text-center">
                 <h1 class="text-5xl md:text-6xl font-light tracking-tight text-gray-900 dark:text-white">Остаётся только суть.</h1>
-                <a class="inline-block rounded-lg bg-primary px-8 py-4 text-lg font-medium text-white transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary/30" href="#">[ Получить свою «жЫмку» в Telegram ]</a>
+                <!-- ССЫЛКА ОБНОВЛЕНА -->
+                <a href="https://t.me/zhymka_bot" target="_blank" class="inline-block rounded-lg bg-primary px-8 py-4 text-lg font-medium text-white transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary/30">
+                    Получить свою «жЫмку» в Telegram
+                </a>
             </div>
         </div>
     </section>
